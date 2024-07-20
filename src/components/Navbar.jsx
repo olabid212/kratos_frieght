@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <div>
     
-      <nav className='px-5 xl:px-40 bg-[url("/Background.png")]   justify-between flex w-full items-center'>
+      <nav className='px-5 xl:px-40 bg-[url("/Background.png")]  justify-between flex w-full items-center'>
     
     <div className='space-x-10 hidden lg:block'>
     <Link className='size-[16px] text-[#ffffff] font-[600] leading-[21px]' to="/">Home</Link>
@@ -28,8 +28,8 @@ const Navbar = () => {
 
     </div>
 
-    <div className='flex items-center  space-x-5 lg:space-x-14'>
-  <div className='flex space-x-3 lg:space-x-8'>
+    <div className='flex items-center  space-x-5 md:space-x-14'>
+  <div className='flex space-x-3 md:space-x-8'>
     <FaInstagram className='text-[#ffffff] '/>
     <FaFacebook className='text-[#ffffff]'/>
     <FaXTwitter className='text-[#ffffff]'/>

@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <div>
-      <header className='w-full px-5 xl:px-40 flex items-center bg-[#091242] py-8 justify-between'>
+      <header className='w-full px-5 xl:px-40 flex items-center bg-[#091242] py-8 justify-between '>
       
       <div className='h-[36px]'>
         <img className='h-[36px]' src="/Logo (8).png" alt="" />
@@ -18,7 +18,7 @@ const Header = () => {
 
 
        
-      <div className='md:flex  xl:space-x-10 space-x-4 hidden '>
+      <div className='lg:flex  xl:space-x-10 space-x-4 hidden '>
      
      <div className='flex items-center space-x-3'>
       <div className='bg-[#273270] xl:size-[63px] size-[37px]  flex items-center justify-center rounded-full'>

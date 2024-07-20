@@ -6,7 +6,8 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <div>
-      <footer className='px-5 xl:px-40 w-full py-10 bg-[#091242] flex flex-col lg:flex-row gap-10'>
+      <div className='px-5 xl:px-40 w-full py-10 bg-[#091242] overflow-hidden'>
+      <footer className=' flex flex-col lg:flex-row gap-10'>
       
       <div className='flex-[30%]'>
 
@@ -80,8 +81,16 @@ const Footer = () => {
 
     </div>
     
-
+     
       </footer>
+
+      <hr className='mt-10'/>
+        <div className='text-center'>
+  <p className='text-white mt-7 '> Copyright © TransitFlow | Designed by Oatship Systems
+  </p>
+  </div>
+      </div>
+     
     </div>
   )
 }

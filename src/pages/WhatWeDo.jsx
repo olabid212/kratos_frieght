@@ -11,7 +11,7 @@ const WhatWeDo = () => {
 
   return (
     <div>
-      <section className='px-5 xl:px-40 w-full my-40 h-[50vh] py-20 gap-20 flex flex-col md:flex-row  '>
+      <section className='px-5 xl:px-40 w-full my-40 min-h-[50vh] py-20 gap-20 flex flex-col lg:flex-row  '>
        
 
        <div className='flex-[30%] '>
@@ -27,14 +27,14 @@ const WhatWeDo = () => {
      {services && services.map(service => (
         <div key={service.img} className='flex space-x-4'>
             <div>
-           <img src={service.img} alt="" />
+           <img className='w-[80px]' src={service.img} alt="" />
 
             </div>
  
 
  <div className='border-l px-3 border-[#D8D8D8]'>
-<p>{service.title}</p>
-<p>{service.body}</p>
+<p className='font-[400] text-[25px] leading-[29px] text-[#1C1F35]'>{service.title}</p>
+<p className='font-[500] text-[16px] leading-[25px] text-[#666C89]'>{service.body}</p>
 
  </div>
 
