@@ -1,10 +1,16 @@
 import React from 'react'
+import ContactBanner from './ContactBanner'
+import GetInTouch from './GetInTouch'
+import Faq from './Faq'
 
 const Contact = () => {
   return (
-    <div>
-      contact
-    </div>
+    <>
+    <ContactBanner />
+    <GetInTouch />
+    <Faq />
+    
+    </>
   )
 }
 

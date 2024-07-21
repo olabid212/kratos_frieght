@@ -3,30 +3,32 @@ import { FaRegEnvelope } from "react-icons/fa";
 import { GoClock } from "react-icons/go";
 import { MdOutlinePhone } from "react-icons/md";
 
-const ContactUs = () => {
+const GetInTouch = () => {
   return (
-    <div>
-      <main className="px-5 mb-40 py-20 xl:px-40 w-full bg-[#091242] ">
-        <div className="flex flex-col md:flex-row gap-20">
-          <div className="space-y-5 flex-[40%] ">
-            <p className="p-2 text-[14px] font-[400] bg-gray-400 w-fit border-l-2 border-[#FFB629]">
+    <div className="w-full my-40  xl:px-40 ">
+      <section className="  xl:px-24  ">
+        <div className="bg-[#091242] xl:p-20 p-8 space-y-10">
+          <div className="space-y-4">
+            <p className="p-2 text-[14px] font-[400] bg-gray-100 w-fit border-l-4 border-[#FFB629]">
               Contact
             </p>
             <h1 className="text-[#fff] font-[600] text-[35px] leading-[41px]">
               Get In Touch With Us
             </h1>
-            <p className="text-[#fff] font-[500] text-[16px] leading-[24px]">
+            <p className="text-[#fff]">
               Leverage agile frameworks to provide a robust synopsis for
               strategy foster collaborative thinking to further the overall
-              value proposition.{" "}
+              value.
             </p>
+          </div>
 
-            <div className="flex items-center space-x-3">
-              <div className="bg-[#273270] xl:size-[63px] size-[37px]  flex items-center justify-center rounded-full">
-                <GoClock className="text-[#F6B426] size-[22px]" />
+          <div className="flex justify-between">
+            <div className="grid items-center justify-center  ">
+              <div className="bg-[#273270] xl:size-[63px] size-[37px]   flex items-center justify-center rounded-full">
+                <GoClock className="text-[#fff] size-[22px]" />
               </div>
 
-              <div className="text-[#ffffff]">
+              <div className="text-[#ffffff] ">
                 <p className="xl:text-[14px] text-[11px]">
                   Mon - Sat 9.00 - 18.00 <br />
                   Sunday Closed
@@ -34,34 +36,30 @@ const ContactUs = () => {
               </div>
             </div>
 
-            <div className="flex  items-center space-x-3">
+            <div className="">
               <div className="bg-[#273270] xl:size-[63px] size-[37px] flex items-center justify-center rounded-full">
-                <FaRegEnvelope className="text-[#F6B426] size-[22px]" />
+                <FaRegEnvelope className="text-[#fff] size-[22px]" />
               </div>
 
               <div className="text-[#ffffff]">
                 <p className="xl:text-[14px] text-[11px]">
-                  Email <br />
                   contact@logistics.com
                 </p>
               </div>
             </div>
 
-            <div className="flex  items-center space-x-3">
+            <div className="">
               <div className="bg-[#273270] xl:size-[63px] size-[37px] flex items-center justify-center rounded-full">
-                <MdOutlinePhone className="text-[#F6B426] xl:size-[22px] size-[18px]" />
+                <MdOutlinePhone className="text-[#fff] xl:size-[22px] size-[18px]" />
               </div>
 
               <div className="text-[#ffffff] ">
-                <p className="xl:text-[14px] text-[11px]">
-                  Call Us <br />
-                  (00) 112 365 489
-                </p>
+                <p className="xl:text-[14px] text-[11px]">(00) 112 365 489</p>
               </div>
             </div>
           </div>
 
-          <div className="flex-[60%] ">
+          <div>
             <form className="flex flex-col max-sm:gap-7  gap-5">
               <div className="flex max-sm:flex-col max-sm:gap-7 gap-10">
                 <input
@@ -98,24 +96,35 @@ const ContactUs = () => {
                 cols={5}
               ></textarea>
 
-              <button className="px-6 w-fit py-3 bg-yellow-400" type="submit">
+              <button
+                className="px-6 w-fit mx-auto py-3 bg-yellow-400"
+                type="submit"
+              >
                 Submit Message
               </button>
             </form>
           </div>
         </div>
+      </section>
 
-        <div className="grid sm:grid-cols-4 grid-cols-2 mt-20 ">
-          <img src="/1.png" alt="" />
-          <img src="/2.png" alt="" />
-
-          <img src="/3.png" alt="" />
-
-          <img src="/4.png" alt="" />
+      <div className="grid sm:grid-cols-4 grid-cols-2 mt-20 ">
+        <div className="border border-gray-600">
+          <img className="h-full" src="/1.png" alt="" />
         </div>
-      </main>
+        <div className="border border-gray-600">
+          <img src="/3 (2).png" alt="" />
+        </div>
+
+        <div className="border border-gray-600">
+          <img src="/2 (2).png" alt="" />
+        </div>
+
+        <div className="border border-gray-600">
+          <img src="/4 (3).png" alt="" />
+        </div>
+      </div>
     </div>
   );
 };
 
-export default ContactUs;
+export default GetInTouch;

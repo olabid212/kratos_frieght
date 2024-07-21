@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const WhatWeDo = () => {
+const Logistics = () => {
   const services = [
     {
       img: "/Icon (6).png",
@@ -18,33 +19,42 @@ const WhatWeDo = () => {
       body: "Following the quality of our service thus having gained trust of our many clients.",
     },
     {
+      img: "/Icon (17).png",
+      title: "Project & Exhibition",
+      body: "Following the quality of our service thus having gained trust of our many clients.",
+    },
+    {
       img: "/Icon (8).png",
       title: "Local Shipping Services",
       body: "Following the quality of our service thus having gained trust of our many clients.",
     },
+    {
+      img: "/Icon (18).png",
+      title: "Customer Clearance",
+      body: "Following the quality of our service thus having gained trust of our many clients.",
+    },
   ];
-
   return (
     <div>
-      <section className="px-5 xl:px-40 w-full my-40 min-h-[50vh] py-20 gap-20 flex flex-col lg:flex-row  ">
-        <div className="flex-[30%] ">
-          <p className="p-2 text-[14px] font-[400] bg-gray-100 w-fit border-l-2 border-[#FFB629]">
+      <section className="px-5 xl:px-40 grid justify-center items-center py-20 w-full my-40 bg-[#F4F4F4]">
+        <div className="flex flex-col justify-center items-center mb-20 space-y-3 ">
+          <p className="p-2 text-center text-[14px] font-[400] bg-gray-100 w-fit border-l-2 border-[#FFB629]">
             What We Do
           </p>
-          <h1 className="text-[#1C1F35] font-[600] text-[35px] leading-[41px]">
-            Safe & Reliable Cargo Solutions
+          <h1 className="text-[#1C1F35] font-[600] sm:text-[35px] text-[28px] leading-[41px]">
+            Our Logistics Services
           </h1>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2  gap-10 flex-[70%] ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-20  ">
           {services &&
             services.map((service) => (
-              <div key={service.img} className="flex space-x-4">
+              <div key={service.img} className="space-y-3 ">
                 <div>
-                  <img className="w-[80px]" src={service.img} alt="" />
+                  <img className="w-[50px]" src={service.img} alt="" />
                 </div>
 
-                <div className="border-l px-3 border-[#D8D8D8]">
+                <div className="space-y-3">
                   <p className="font-[400] text-[25px] leading-[29px] text-[#1C1F35]">
                     {service.title}
                   </p>
@@ -55,9 +65,15 @@ const WhatWeDo = () => {
               </div>
             ))}
         </div>
+
+        <div className="mt-20 text-center">
+          <Link className="text-white px-6 py-3 bg-indigo-950" to="/services">
+            Work Details
+          </Link>
+        </div>
       </section>
     </div>
   );
 };
 
-export default WhatWeDo;
+export default Logistics;
