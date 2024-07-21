@@ -1,10 +1,13 @@
 import React from 'react'
+import ServiceBanner from './ServiceBanner'
 
 const Services = () => {
   return (
-    <div>
-      services
-    </div>
+<>
+
+<ServiceBanner />
+
+</>
   )
 }
 
