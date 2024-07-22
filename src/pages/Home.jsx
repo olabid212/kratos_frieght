@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import Banner from './Banner'
 import WhatWeDo from './WhatWeDo'
@@ -12,6 +12,12 @@ import ContactUs from './ContactUs'
 import PreFooter from '../components/PreFooter'
 
 const Home = () => {
+
+  useEffect(() => {
+    window.scroll({top: 0, behavior:"smooth"})
+  }, [])
+
+
   return (
     <div className=''>
       

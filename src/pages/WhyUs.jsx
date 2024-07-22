@@ -34,14 +34,14 @@ const WhyUs = () => {
           </div>
 
           <div className="relative">
-            <img src="/Image.jpg" alt="" />
-            <div className="bg-white p-5 absolute top-[200px] -left-[80px] z-10 ">
+            <img className="" src="/Image (8).png" alt="" />
+            {/* <div className="bg-white p-5 absolute top-[200px]  -left-[80px] z-10 ">
               <img className="z-10 w-full" src="/Photo (2).png" alt="" />
-            </div>
+            </div> */}
           </div>
         </main>
 
-        <div className="flex justify-center sm:mt-[50px]  mt-[200px]">
+        <div className="flex justify-center mt-[50px]">
           <div className="flex space-x-3 border border-l-0 p-5 items-center w-fit ">
             <p>1294</p>
 

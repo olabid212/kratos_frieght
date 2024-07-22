@@ -1,5 +1,6 @@
 import React from "react";
-import { FaRegEnvelope } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaRegEnvelope } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { MdOutlinePhone } from "react-icons/md";
 import { Link } from "react-router-dom";
 
@@ -12,9 +13,9 @@ const Footer = () => {
             <img className="h-[36px] mb-[70px]" src="/Logo (8).png" alt="" />
 
             <div className="space-y-4">
-              <p className="text-[#ffffff] w-[350px]">
-                Leverage agile frameworks to provide a robust synopsis for
-                strategy collaborative thinking to further the overall value
+              <p className="text-[#ffffff] ">
+                Leverage agile frameworks to provide a robust synopsis  for
+                strategy collaborative thinking to  further the overall value
                 proposition.
               </p>
               <div className="flex items-center space-x-3">
@@ -146,9 +147,16 @@ const Footer = () => {
                   placeholder="email here"
                 />{" "}
                 <br /> <br />
-                <button className="bg-[#FFB629] w-full px-6 py-3 text-[#fff] ">
+                <div className="flex items-center space-x-5">
+                <button className="bg-[#FFB629] w-fit px-6 py-3 text-[#fff] ">
                   Send Now
                 </button>
+                <div className="flex space-x-3">
+                <FaLinkedin className="text-white text-xl"/>
+                <FaXTwitter  className="text-white text-xl"/>
+                <FaFacebook className="text-white text-xl"/>
+                </div>
+                </div>
               </form>
             </div>
           </div>
