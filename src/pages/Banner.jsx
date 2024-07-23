@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import 'aos/dist/aos.css'
+
 
 const Banner = () => {
+
+useEffect(() => {
+  AOS.init()
+}, [])
+
+
   return (
     <div className='bg-[url("/Photo.png")] bg-cover w-full'>
       <Navbar />
       <main className="h-[100vh] px-5 lg:px-40 grid items-center ">
-        <div className="space-y-5 sm:w-[600px] w-[300px]">
+        <div className="space-y-5 sm:w-[600px] w-[300px]" data-aos='fade-right' data-aos-duration='600'>
           <p className="text-[14px] font-[400] border-l-2 ps-2 text-white border-[#FFB629]">
             Logistics & Supply Chain Solutions
           </p>

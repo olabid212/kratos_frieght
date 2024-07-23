@@ -1,17 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Work = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div>
       <main className="mt-40 -mb-[100px] px-5 lg:px-40 ">
         <div className="text-center">
-          <p className="text-[35px] leading-[41px] font-[600] text-[#1C1F35] mb-10">
+          <p
+            className="text-[35px] leading-[41px] font-[600] text-[#1C1F35] mb-10"
+            data-aos="fade-up"
+            data-aos-duration="600"
+          >
             Transporting Across The World
           </p>
         </div>
 
         <div className="grid xl:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-10">
-          <div className="relative xl:block md:block hidden">
+          <div
+            className="relative xl:block md:block hidden transition transform hover:scale-110 duration-300 delay-150 ease-in-out"
+            data-aos="fade-right"
+            data-aos-duration="600"
+          >
             <img src="/Photo (3).png" alt="" />
             <img className="absolute top-0" src="/Background (2).png" alt="" />
 
@@ -21,7 +36,11 @@ const Work = () => {
             </div>
           </div>
 
-          <div className="relative xl:block md:hidden hidden">
+          <div
+            className="relative xl:block md:hidden hidden"
+            data-aos="fade-right"
+            data-aos-duration="600"
+          >
             <img src="/Photo (4).png" alt="" />
             <img className="absolute top-0" src="/Background (2).png" alt="" />
 
@@ -31,7 +50,11 @@ const Work = () => {
             </div>
           </div>
 
-          <div className="relative xl:block md:hidden hidden">
+          <div
+            className="relative xl:block md:hidden hidden"
+            data-aos="fade-up"
+            data-aos-duration="600"
+          >
             <img src="/Photo (5).png" alt="" />
             <img className="absolute top-0" src="/Background (2).png" alt="" />
 
@@ -41,7 +64,11 @@ const Work = () => {
             </div>
           </div>
 
-          <div className="relative">
+          <div
+            className="relative"
+            data-aos="fade-left"
+            data-aos-duration="600"
+          >
             <img src="/Photo (6).png" alt="" />
             <img className="absolute top-0" src="/Background (2).png" alt="" />
 
@@ -51,7 +78,11 @@ const Work = () => {
             </div>
           </div>
 
-          <div className="relative">
+          <div
+            className="relative"
+            data-aos="fade-left"
+            data-aos-duration="600"
+          >
             <img src="/Photo (7).png" alt="" />
             <img className="absolute top-0" src="/Background (2).png" alt="" />
 

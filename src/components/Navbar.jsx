@@ -56,9 +56,11 @@ const Navbar = () => {
             <FaLinkedinIn className="text-[#ffffff]" />
           </div>
 
+          <Link to="/">
           <div className="bg-white py-4 px-4 ">
             <p className="text-sm">Request Quote</p>
           </div>
+          </Link>
         </div>
 
         <button className="lg:hidden block" onClick={openMenu}>
@@ -73,7 +75,7 @@ const Navbar = () => {
       {/* for smaller screens sizes */}
 
       <nav
-        className={`w-full absolute lg:hidden space-y-10 transform transition-transform duration-500 delay-150 ease-in-out  bg-[#091242] p-8  ${
+        className={`w-full absolute lg:hidden space-y-10 transform z-10 transition-transform duration-500 delay-150 ease-in-out  bg-[#091242] p-8  ${
           isMenuOpen ? "-translate-y-0" : "-translate-y-[2000px]"
         } `}
       >

@@ -1,27 +1,50 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaRegEnvelope } from "react-icons/fa";
 import { GoClock } from "react-icons/go";
 import { MdOutlinePhone } from "react-icons/md";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const ContactUs = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div>
       <main className="px-5 mb-40 py-20 xl:px-40 w-full bg-[#091242] ">
         <div className="flex flex-col md:flex-row gap-20">
           <div className="space-y-5 flex-[40%] ">
-            <p className="p-2 text-[14px] font-[400] bg-gray-400 w-fit border-l-2 border-[#FFB629]">
+            <p
+              className="p-2 text-[14px] font-[400] bg-gray-400 w-fit border-l-2 border-[#FFB629]"
+              data-aos="fade-right"
+              data-aos-duration="600"
+            >
               Contact
             </p>
-            <h1 className="text-[#fff] font-[600] text-[35px] leading-[41px]">
+            <h1
+              className="text-[#fff] font-[600] text-[35px] leading-[41px]"
+              data-aos="fade-right"
+              data-aos-duration="600"
+            >
               Get In Touch With Us
             </h1>
-            <p className="text-[#fff] font-[500] text-[16px] leading-[24px]">
+            <p
+              className="text-[#fff] font-[500] text-[16px] leading-[24px]"
+              data-aos="fade-right"
+              data-aos-duration="600"
+            >
               Leverage agile frameworks to provide a robust synopsis for
               strategy foster collaborative thinking to further the overall
               value proposition.{" "}
             </p>
 
-            <div className="flex items-center space-x-3">
+            <div
+              className="flex items-center space-x-3"
+              data-aos="fade-right"
+              data-aos-duration="600"
+            >
               <div className="bg-[#273270] xl:size-[63px] size-[37px]  flex items-center justify-center rounded-full">
                 <GoClock className="text-[#F6B426] size-[22px]" />
               </div>
@@ -34,7 +57,11 @@ const ContactUs = () => {
               </div>
             </div>
 
-            <div className="flex  items-center space-x-3">
+            <div
+              className="flex  items-center space-x-3"
+              data-aos="fade-right"
+              data-aos-duration="600"
+            >
               <div className="bg-[#273270] xl:size-[63px] size-[37px] flex items-center justify-center rounded-full">
                 <FaRegEnvelope className="text-[#F6B426] size-[22px]" />
               </div>
@@ -47,7 +74,11 @@ const ContactUs = () => {
               </div>
             </div>
 
-            <div className="flex  items-center space-x-3">
+            <div
+              className="flex  items-center space-x-3"
+              data-aos="fade-right"
+              data-aos-duration="600"
+            >
               <div className="bg-[#273270] xl:size-[63px] size-[37px] flex items-center justify-center rounded-full">
                 <MdOutlinePhone className="text-[#F6B426] xl:size-[22px] size-[18px]" />
               </div>
@@ -62,7 +93,11 @@ const ContactUs = () => {
           </div>
 
           <div className="flex-[60%] ">
-            <form className="flex flex-col max-sm:gap-7  gap-5">
+            <form
+              className="flex flex-col max-sm:gap-7  gap-5"
+              data-aos="fade-left"
+              data-aos-duration="600"
+            >
               <div className="flex max-sm:flex-col max-sm:gap-7 gap-10">
                 <input
                   className="bg-[#091242] outline-none border px-6 py-3 w-full text-white"

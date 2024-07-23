@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const WhatWeDo = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const services = [
     {
       img: "/Icon (6).png",
@@ -27,7 +34,11 @@ const WhatWeDo = () => {
   return (
     <div>
       <section className="px-5 xl:px-40 w-full my-40 min-h-[50vh] py-20 gap-20 flex flex-col lg:flex-row  ">
-        <div className="flex-[30%] ">
+        <div
+          className="flex-[30%] "
+          data-aos="fade-right"
+          data-aos-duration="600"
+        >
           <p className="p-2 text-[14px] font-[400] bg-gray-100 w-fit border-l-2 border-[#FFB629]">
             What We Do
           </p>
@@ -39,7 +50,12 @@ const WhatWeDo = () => {
         <div className="grid grid-cols-1 md:grid-cols-2  gap-10 flex-[70%] ">
           {services &&
             services.map((service) => (
-              <div key={service.img} className="flex space-x-4">
+              <div
+                key={service.img}
+                className="flex space-x-4"
+                data-aos="fade-left"
+                data-aos-duration="600"
+              >
                 <div>
                   <img className="w-[80px]" src={service.img} alt="" />
                 </div>

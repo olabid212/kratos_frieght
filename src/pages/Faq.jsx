@@ -1,7 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MdOutlinePhone } from "react-icons/md";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const Faq = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const [activeTab, setActiveTab] = useState(0);
 
   const tabs = [
@@ -35,7 +42,7 @@ const Faq = () => {
     <div>
       <section className="ps-5 pe-5 bg-gray-100 py-20 w-full my-40 xl:ps-40 flex flex-col gap-20 lg:flex-row overflow-hidden">
         <div className="flex-[50%]  flex flex-col  space-y-4">
-          <div className=" ">
+          <div className=" " data-aos="fade-right" data-aos-duration="600">
             <p className="p-2 text-[14px] font-[400] bg-gray-100 w-fit border-l-2 border-[#FFB629]">
               FAQ
             </p>
@@ -44,7 +51,11 @@ const Faq = () => {
             </h1>
           </div>
 
-          <ul className="space-y-4">
+          <ul
+            className="space-y-4"
+            data-aos="fade-right"
+            data-aos-duration="600"
+          >
             {tabs.map((tab, index) => (
               <li
                 key={index}
@@ -60,20 +71,32 @@ const Faq = () => {
             ))}
           </ul>
 
-          <div className="md:w-[500px] w-[350px]  text-[16px] leading-6 font-[700]">
+          <div
+            className="md:w-[500px] w-[350px]  text-[16px] leading-6 font-[700]"
+            data-aos="fade-right"
+            data-aos-duration="600"
+          >
             {tabs[activeTab].content}
           </div>
         </div>
 
         <div className="flex-[50%] ">
-          <div className="w-full  relative">
+          <div
+            className="w-full  relative"
+            data-aos="fade-right"
+            data-aos-duration="600"
+          >
             <img
               className="w-full"
               src="https://res.cloudinary.com/dfuse3jtq/image/upload/v1721568756/Photo_8_q798f5.png"
               alt=""
             />
 
-            <div className="md:p-10 p-5 space-y-3 bg-[#091242] absolute bottom-0 left-0 ">
+            <div
+              className="md:p-10 p-5 space-y-3 bg-[#091242] absolute bottom-0 left-0 "
+              data-aos="fade-left"
+              data-aos-duration="600"
+            >
               <p className="p-2 text-[14px] font-[400] bg-gray-100 w-fit border-l-2 border-[#FFB629]">
                 Let's Talk
               </p>

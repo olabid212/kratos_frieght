@@ -46,8 +46,8 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex-[70%] px-4 flex justify-between gap-10 flex-col md:flex-row">
-            <div>
+          <div className="flex-[70%] px-4 flex justify-between gap-10 flex-col md:flex-row" >
+            <div >
               <h1 className="mb-[40px] text-[#ffffff] font-[500] text-[25px]">
                 Pages
               </h1>
@@ -142,7 +142,7 @@ const Footer = () => {
               </h1>
               <form>
                 <input
-                  className="bg-[#4E5683] px-6 w-full py-3 border-2 border-gray-500 outline-none"
+                  className="bg-[#091242] text-white px-6 w-full py-3 border-2 border-gray-500 outline-none"
                   type="email"
                   placeholder="email here"
                 />{" "}

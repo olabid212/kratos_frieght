@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const Logistics = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const services = [
     {
       img: "/Icon (6).png",
@@ -37,7 +44,11 @@ const Logistics = () => {
   return (
     <div>
       <section className="px-5 xl:px-40 grid justify-center items-center py-20 w-full my-40 bg-[#F4F4F4]">
-        <div className="flex flex-col justify-center items-center mb-20 space-y-3 ">
+        <div
+          className="flex flex-col justify-center items-center mb-20 space-y-3 "
+          data-aos="fade-right"
+          data-aos-duration="600"
+        >
           <p className="p-2 text-center text-[14px] font-[400] bg-gray-100 w-fit border-l-2 border-[#FFB629]">
             What We Do
           </p>
@@ -49,7 +60,12 @@ const Logistics = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-20  ">
           {services &&
             services.map((service) => (
-              <div key={service.img} className="space-y-3 ">
+              <div
+                key={service.img}
+                className="space-y-3 "
+                data-aos="fade-up"
+                data-aos-duration="600"
+              >
                 <div>
                   <img className="w-[50px]" src={service.img} alt="" />
                 </div>
@@ -67,7 +83,12 @@ const Logistics = () => {
         </div>
 
         <div className="mt-20 text-center">
-          <Link className="text-white px-6 py-3 bg-indigo-950" to="/services">
+          <Link
+            className="text-white px-6 py-3 bg-indigo-950"
+            to="/services"
+            data-aos="fade-right"
+            data-aos-duration="600"
+          >
             Work Details
           </Link>
         </div>

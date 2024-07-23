@@ -1,7 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const ServiceTab = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const [activeTab, setActiveTab] = useState(0);
 
   const handleChange = (index) => {
@@ -43,7 +50,11 @@ const ServiceTab = () => {
   return (
     <div>
       <section className="px-5 xl:px-40 w-full ">
-        <div className="flex flex-col justify-center items-center ">
+        <div
+          className="flex flex-col justify-center items-center "
+          data-aos="fade-right"
+          data-aos-duration="600"
+        >
           <p className="p-2 text-[14px] font-[400] bg-gray-100 w-fit border-l-2 border-[#FFB629]">
             Services
           </p>
@@ -55,6 +66,8 @@ const ServiceTab = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 mt-20  gap-5  ">
           {services.map((service, index) => (
             <div
+              data-aos="flip-left"
+              data-aos-duration="600"
               key={service.img}
               onClick={() => handleChange(index)}
               className={`p-5 ${
@@ -83,17 +96,26 @@ const ServiceTab = () => {
           <>
             <div className="mt-20 space-y-7">
               <div>
-                <img src="/Image (9).png" alt="" />
+                <img
+                  src="/Image (9).png"
+                  alt=""
+                  data-aos="fade-up"
+                  data-aos-duration="600"
+                />
               </div>
 
-              <div className="flex items-center  space-x-3">
+              <div
+                className="flex items-center  space-x-3"
+                data-aos="fade-right"
+                data-aos-duration="600"
+              >
                 <img src="/Icon (6).png" alt="" />
                 <p className="font-[600] text-[#1C1F35] md:text-[35px] text-[28px] leading-[41px]">
                   Sea Transport Services
                 </p>
               </div>
 
-              <div>
+              <div data-aos="fade-right" data-aos-duration="600">
                 <p className="font-[500] text-[16px] leading-[24px] text-[#666C89]">
                   Sed ut perspiciatis, unde omnis iste natus error sit
                   voluptatem accusantium doloremque laudantium, totam rem
@@ -125,7 +147,11 @@ const ServiceTab = () => {
             </div>
 
             <div className="mt-10 flex flex-col lg:flex-row gap-10 items-center">
-              <div className="flex-[40%]">
+              <div
+                className="flex-[40%]"
+                data-aos="fade-right"
+                data-aos-duration="600"
+              >
                 <h1 className="font-[600] text-[#1C1F35] md:text-[35px] text-[28px] leading-[41px]">
                   Benefit of Service
                 </h1>
@@ -165,7 +191,11 @@ const ServiceTab = () => {
                 </ul>
               </div>
 
-              <div className="flex-[60%]">
+              <div
+                className="flex-[60%]"
+                data-aos="fade-left"
+                data-aos-duration="600"
+              >
                 <img
                   className=""
                   src="https://img.freepik.com/free-photo/transport-logistics-products_23-2151541830.jpg?ga=GA1.1.1642242442.1716375531&semt=ais_user"
@@ -175,7 +205,11 @@ const ServiceTab = () => {
             </div>
 
             <div className="mt-10 flex flex-col lg:flex-row gap-10 items-center">
-              <div className="mt-10 flex-[60%]">
+              <div
+                className="mt-10 flex-[60%]"
+                data-aos="fade-right"
+                data-aos-duration="600"
+              >
                 <video
                   controls
                   autoPlay
@@ -183,7 +217,11 @@ const ServiceTab = () => {
                 ></video>
               </div>
 
-              <div className="flex-[40%]">
+              <div
+                className="flex-[40%]"
+                data-aos="fade-left"
+                data-aos-duration="600"
+              >
                 <h1 className="font-[600] text-[#1C1F35] md:text-[35px] text-[28px] leading-[41px]">
                   How It Works
                 </h1>
@@ -207,18 +245,22 @@ const ServiceTab = () => {
         {activeTab === 1 && (
           <>
             <div className="mt-20 space-y-7">
-              <div>
+              <div data-aos="fade-up" data-aos-duration="600">
                 <img src="/Image (9).png" alt="" />
               </div>
 
-              <div className="flex items-center  space-x-3">
+              <div
+                className="flex items-center  space-x-3"
+                data-aos="fade-right"
+                data-aos-duration="600"
+              >
                 <img src="/Icon (7).png" alt="" />
                 <p className="font-[600] text-[#1C1F35] md:text-[35px] text-[28px] leading-[41px]">
                   Warehousing Services
                 </p>
               </div>
 
-              <div>
+              <div data-aos="fade-right" data-aos-duration="600">
                 <p className="font-[500] text-[16px] leading-[24px] text-[#666C89]">
                   Sed ut perspiciatis, unde omnis iste natus error sit
                   voluptatem accusantium doloremque laudantium, totam rem
@@ -250,7 +292,11 @@ const ServiceTab = () => {
             </div>
 
             <div className="mt-10 flex flex-col lg:flex-row gap-10 items-center">
-              <div className="flex-[40%]">
+              <div
+                className="flex-[40%]"
+                data-aos="fade-right"
+                data-aos-duration="600"
+              >
                 <h1 className="font-[600] text-[#1C1F35] md:text-[35px] text-[28px] leading-[41px]">
                   Benefit of Service
                 </h1>
@@ -290,7 +336,11 @@ const ServiceTab = () => {
                 </ul>
               </div>
 
-              <div className="flex-[60%]">
+              <div
+                className="flex-[60%]"
+                data-aos="fade-left"
+                data-aos-duration="600"
+              >
                 <img
                   className=""
                   src="https://img.freepik.com/free-photo/transport-logistics-products_23-2151541830.jpg?ga=GA1.1.1642242442.1716375531&semt=ais_user"
@@ -300,7 +350,11 @@ const ServiceTab = () => {
             </div>
 
             <div className="mt-10 flex flex-col lg:flex-row gap-10 items-center">
-              <div className="mt-10 flex-[60%]">
+              <div
+                className="mt-10 flex-[60%]"
+                data-aos="fade-right"
+                data-aos-duration="600"
+              >
                 <video
                   controls
                   autoPlay
@@ -308,7 +362,11 @@ const ServiceTab = () => {
                 ></video>
               </div>
 
-              <div className="flex-[40%]">
+              <div
+                className="flex-[40%]"
+                data-aos="fade-left"
+                data-aos-duration="600"
+              >
                 <h1 className="font-[600] text-[#1C1F35] md:text-[35px] text-[28px] leading-[41px]">
                   How It Works
                 </h1>
@@ -332,18 +390,22 @@ const ServiceTab = () => {
         {activeTab === 2 && (
           <>
             <div className="mt-20 space-y-7">
-              <div>
+              <div data-aos="fade-up" data-aos-duration="600">
                 <img src="/Image (9).png" alt="" />
               </div>
 
-              <div className="flex items-center  space-x-3">
+              <div
+                className="flex items-center  space-x-3"
+                data-aos="fade-right"
+                data-aos-duration="600"
+              >
                 <img src="/Icon (1).svg" alt="" />
                 <p className="font-[600] text-[#1C1F35] md:text-[35px] text-[28px] leading-[41px]">
                   Air Freight Services
                 </p>
               </div>
 
-              <div>
+              <div data-aos="fade-right" data-aos-duration="600">
                 <p className="font-[500] text-[16px] leading-[24px] text-[#666C89]">
                   Sed ut perspiciatis, unde omnis iste natus error sit
                   voluptatem accusantium doloremque laudantium, totam rem
@@ -375,7 +437,11 @@ const ServiceTab = () => {
             </div>
 
             <div className="mt-10 flex flex-col lg:flex-row gap-10 items-center">
-              <div className="flex-[40%]">
+              <div
+                className="flex-[40%]"
+                data-aos="fade-right"
+                data-aos-duration="600"
+              >
                 <h1 className="font-[600] text-[#1C1F35] md:text-[35px] text-[28px] leading-[41px]">
                   Benefit of Service
                 </h1>
@@ -415,7 +481,11 @@ const ServiceTab = () => {
                 </ul>
               </div>
 
-              <div className="flex-[60%]">
+              <div
+                className="flex-[60%]"
+                data-aos="fade-left"
+                data-aos-duration="600"
+              >
                 <img
                   className=""
                   src="https://img.freepik.com/free-photo/transport-logistics-products_23-2151541830.jpg?ga=GA1.1.1642242442.1716375531&semt=ais_user"
@@ -425,7 +495,11 @@ const ServiceTab = () => {
             </div>
 
             <div className="mt-10 flex flex-col lg:flex-row gap-10 items-center">
-              <div className="mt-10 flex-[60%]">
+              <div
+                className="mt-10 flex-[60%]"
+                data-aos="fade-right"
+                data-aos-duration="600"
+              >
                 <video
                   controls
                   autoPlay
@@ -433,7 +507,11 @@ const ServiceTab = () => {
                 ></video>
               </div>
 
-              <div className="flex-[40%]">
+              <div
+                className="flex-[40%]"
+                data-aos="fade-left"
+                data-aos-duration="600"
+              >
                 <h1 className="font-[600] text-[#1C1F35] md:text-[35px] text-[28px] leading-[41px]">
                   How It Works
                 </h1>
@@ -457,18 +535,22 @@ const ServiceTab = () => {
         {activeTab === 3 && (
           <>
             <div className="mt-20 space-y-7">
-              <div>
+              <div data-aos="fade-up" data-aos-duration="600">
                 <img src="/Image (9).png" alt="" />
               </div>
 
-              <div className="flex items-center  space-x-3">
+              <div
+                className="flex items-center  space-x-3"
+                data-aos="fade-right"
+                data-aos-duration="600"
+              >
                 <img src="/Icon (17).png" alt="" />
                 <p className="font-[600] text-[#1C1F35] md:text-[35px] text-[28px] leading-[41px]">
                   Project & Exhibition
                 </p>
               </div>
 
-              <div>
+              <div data-aos="fade-right" data-aos-duration="600">
                 <p className="font-[500] text-[16px] leading-[24px] text-[#666C89]">
                   Sed ut perspiciatis, unde omnis iste natus error sit
                   voluptatem accusantium doloremque laudantium, totam rem
@@ -500,7 +582,11 @@ const ServiceTab = () => {
             </div>
 
             <div className="mt-10 flex flex-col lg:flex-row gap-10 items-center">
-              <div className="flex-[40%]">
+              <div
+                className="flex-[40%]"
+                data-aos="fade-right"
+                data-aos-duration="600"
+              >
                 <h1 className="font-[600] text-[#1C1F35] md:text-[35px] text-[28px] leading-[41px]">
                   Benefit of Service
                 </h1>
@@ -540,7 +626,11 @@ const ServiceTab = () => {
                 </ul>
               </div>
 
-              <div className="flex-[60%]">
+              <div
+                className="flex-[60%]"
+                data-aos="fade-left"
+                data-aos-duration="600"
+              >
                 <img
                   className=""
                   src="https://img.freepik.com/free-photo/transport-logistics-products_23-2151541830.jpg?ga=GA1.1.1642242442.1716375531&semt=ais_user"
@@ -550,7 +640,11 @@ const ServiceTab = () => {
             </div>
 
             <div className="mt-10 flex flex-col lg:flex-row gap-10 items-center">
-              <div className="mt-10 flex-[60%]">
+              <div
+                className="mt-10 flex-[60%]"
+                data-aos="fade-right"
+                data-aos-duration="600"
+              >
                 <video
                   controls
                   autoPlay
@@ -558,7 +652,11 @@ const ServiceTab = () => {
                 ></video>
               </div>
 
-              <div className="flex-[40%]">
+              <div
+                className="flex-[40%]"
+                data-aos="fade-left"
+                data-aos-duration="600"
+              >
                 <h1 className="font-[600] text-[#1C1F35] md:text-[35px] text-[28px] leading-[41px]">
                   How It Works
                 </h1>
@@ -582,18 +680,22 @@ const ServiceTab = () => {
         {activeTab === 4 && (
           <>
             <div className="mt-20 space-y-7">
-              <div>
+              <div data-aos="fade-up" data-aos-duration="600">
                 <img src="/Image (9).png" alt="" />
               </div>
 
-              <div className="flex items-center  space-x-3">
+              <div
+                className="flex items-center  space-x-3"
+                data-aos="fade-right"
+                data-aos-duration="600"
+              >
                 <img src="/Icon (8).png" alt="" />
                 <p className="font-[600] text-[#1C1F35] md:text-[35px] text-[28px] leading-[41px]">
                   Local Shipping Services
                 </p>
               </div>
 
-              <div>
+              <div data-aos="fade-right" data-aos-duration="600">
                 <p className="font-[500] text-[16px] leading-[24px] text-[#666C89]">
                   Sed ut perspiciatis, unde omnis iste natus error sit
                   voluptatem accusantium doloremque laudantium, totam rem
@@ -625,7 +727,11 @@ const ServiceTab = () => {
             </div>
 
             <div className="mt-10 flex flex-col lg:flex-row gap-10 items-center">
-              <div className="flex-[40%]">
+              <div
+                className="flex-[40%]"
+                data-aos="fade-right"
+                data-aos-duration="600"
+              >
                 <h1 className="font-[600] text-[#1C1F35] md:text-[35px] text-[28px] leading-[41px]">
                   Benefit of Service
                 </h1>
@@ -665,7 +771,11 @@ const ServiceTab = () => {
                 </ul>
               </div>
 
-              <div className="flex-[60%]">
+              <div
+                className="flex-[60%]"
+                data-aos="fade-left"
+                data-aos-duration="600"
+              >
                 <img
                   className=""
                   src="https://img.freepik.com/free-photo/transport-logistics-products_23-2151541830.jpg?ga=GA1.1.1642242442.1716375531&semt=ais_user"
@@ -675,7 +785,11 @@ const ServiceTab = () => {
             </div>
 
             <div className="mt-10 flex flex-col lg:flex-row gap-10 items-center">
-              <div className="mt-10 flex-[60%]">
+              <div
+                className="mt-10 flex-[60%]"
+                data-aos="fade-right"
+                data-aos-duration="600"
+              >
                 <video
                   controls
                   autoPlay
@@ -683,7 +797,11 @@ const ServiceTab = () => {
                 ></video>
               </div>
 
-              <div className="flex-[40%]">
+              <div
+                className="flex-[40%]"
+                data-aos="fade-left"
+                data-aos-duration="600"
+              >
                 <h1 className="font-[600] text-[#1C1F35] md:text-[35px] text-[28px] leading-[41px]">
                   How It Works
                 </h1>
@@ -707,18 +825,22 @@ const ServiceTab = () => {
         {activeTab === 5 && (
           <>
             <div className="mt-20 space-y-7">
-              <div>
+              <div data-aos="fade-up" data-aos-duration="600">
                 <img src="/Image (9).png" alt="" />
               </div>
 
-              <div className="flex items-center  space-x-3">
+              <div
+                className="flex items-center  space-x-3"
+                data-aos="fade-right"
+                data-aos-duration="600"
+              >
                 <img src="/Icon (18).png" alt="" />
                 <p className="font-[600] text-[#1C1F35] md:text-[35px] text-[28px] leading-[41px]">
                   Customer Clearance
                 </p>
               </div>
 
-              <div>
+              <div data-aos="fade-right" data-aos-duration="600">
                 <p className="font-[500] text-[16px] leading-[24px] text-[#666C89]">
                   Sed ut perspiciatis, unde omnis iste natus error sit
                   voluptatem accusantium doloremque laudantium, totam rem
@@ -750,7 +872,11 @@ const ServiceTab = () => {
             </div>
 
             <div className="mt-10 flex flex-col lg:flex-row gap-10 items-center">
-              <div className="flex-[40%]">
+              <div
+                className="flex-[40%]"
+                data-aos="fade-right"
+                data-aos-duration="600"
+              >
                 <h1 className="font-[600] text-[#1C1F35] md:text-[35px] text-[28px] leading-[41px]">
                   Benefit of Service
                 </h1>
@@ -790,7 +916,11 @@ const ServiceTab = () => {
                 </ul>
               </div>
 
-              <div className="flex-[60%]">
+              <div
+                className="flex-[60%]"
+                data-aos="fade-left"
+                data-aos-duration="600"
+              >
                 <img
                   className=""
                   src="https://img.freepik.com/free-photo/transport-logistics-products_23-2151541830.jpg?ga=GA1.1.1642242442.1716375531&semt=ais_user"
@@ -800,7 +930,11 @@ const ServiceTab = () => {
             </div>
 
             <div className="mt-10 flex flex-col lg:flex-row gap-10 items-center">
-              <div className="mt-10 flex-[60%]">
+              <div
+                className="mt-10 flex-[60%]"
+                data-aos="fade-right"
+                data-aos-duration="600"
+              >
                 <video
                   controls
                   autoPlay
@@ -808,7 +942,11 @@ const ServiceTab = () => {
                 ></video>
               </div>
 
-              <div className="flex-[40%]">
+              <div
+                className="flex-[40%]"
+                data-aos="fade-left"
+                data-aos-duration="600"
+              >
                 <h1 className="font-[600] text-[#1C1F35] md:text-[35px] text-[28px] leading-[41px]">
                   How It Works
                 </h1>

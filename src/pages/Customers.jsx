@@ -1,6 +1,6 @@
 // import React from 'react'
 
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -15,7 +15,14 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { FaStar } from "react-icons/fa";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const Customers = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const customers = [
     {
       img: "https://img.freepik.com/free-photo/handsome-man-smiling-happy-face-portrait-close-up_53876-139608.jpg?ga=GA1.1.1642242442.1716375531&semt=sph",
@@ -64,7 +71,11 @@ const Customers = () => {
   return (
     <>
       <div className="px-5 xl:px-40 w-full mb-40 ">
-        <div className=" mb-[50px]">
+        <div
+          className=" mb-[50px]"
+          data-aos="fade-right"
+          data-aos-duration="600"
+        >
           <p className="p-2 text-[14px] font-[400] bg-gray-100 w-fit border-l-2 border-[#FFB629]">
             Testimonials
           </p>
@@ -102,7 +113,7 @@ const Customers = () => {
         >
           <div className="">
             {customers.map((customer) => (
-              <SwiperSlide className="bg-[#F4F4F4] md:p-10 p-8 mb-20">
+              <SwiperSlide className="bg-[#091242] md:p-10 p-8 mb-20">
                 <div className="space-y-5">
                   <div className="flex justify-between">
                     <div className="flex items-center space-x-3">
@@ -114,8 +125,8 @@ const Customers = () => {
                         />
                       </div>
                       <div>
-                        <p className="text-[#091242]">{customer.name}</p>
-                        <p>{customer.job}</p>
+                        <p className="text-[#fff]">{customer.name}</p>
+                        <p className="text-[#fff]">{customer.job}</p>
                       </div>
                     </div>
 
@@ -124,7 +135,7 @@ const Customers = () => {
                     </div>
                   </div>
 
-                  <p className="text-[14px]">{customer.body}</p>
+                  <p className="text-[14px] text-[#fff]">{customer.body}</p>
 
                   <div className="flex space-x-3 ">
                     <FaStar className="text-yellow-400" />

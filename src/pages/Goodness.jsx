@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Goodness = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div>
       <main className="px-5 xl:px-40 w-full my-40">
-        <div className="flex flex-col justify-center items-center">
+        <div
+          className="flex flex-col justify-center items-center"
+          data-aos="fade-up"
+          data-aos-duration="600"
+        >
           <p className="p-2 text-[14px] font-[400] bg-gray-100 w-fit border-l-2 border-[#FFB629]">
             Our Goodness
           </p>
@@ -14,11 +25,15 @@ const Goodness = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row items-center justify-center gap-10 mt-20">
-          <div>
+          <div data-aos="fade-right" data-aos-duration="600">
             <img className="" src="/Image (7).png" alt="" />
           </div>
 
-          <div className="space-y-10">
+          <div
+            className="space-y-10"
+            data-aos="fade-left"
+            data-aos-duration="600"
+          >
             <div className="flex space-x-3">
               <img className="size-10" src="/Icon (19).png" alt="" />
               <div className="space-y-2">

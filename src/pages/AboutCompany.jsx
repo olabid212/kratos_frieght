@@ -1,7 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const AboutCompany = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const [activeTab, setActiveTab] = useState(0);
 
   const tabs = [
@@ -29,26 +36,42 @@ const AboutCompany = () => {
   return (
     <div>
       <section className="px-5 xl:px-40 my-40 w-full flex flex-col items-center justify-center  gap-20 lg:flex-row ">
-        <div className="flex-[50%]">
+        <div
+          className="flex-[50%]"
+          data-aos="fade-right"
+          data-aos-duration="600"
+        >
           <img src="/Image (6).png" alt="" />
         </div>
 
         <div className="flex-[50%] ">
           <div className="space-y-4 mb-14">
-            <p className="p-2 text-[14px] font-[400] bg-gray-100 w-fit border-l-2 border-[#FFB629]">
+            <p
+              className="p-2 text-[14px] font-[400] bg-gray-100 w-fit border-l-2 border-[#FFB629]"
+              data-aos="fade-left"
+              data-aos-duration="600"
+            >
               About Us
             </p>
-            <h1 className="text-[#1C1F35] font-[600] sm:text-[35px] text-[28px] leading-[41px]">
+            <h1
+              className="text-[#1C1F35] font-[600] sm:text-[35px] text-[28px] leading-[41px]"
+              data-aos="fade-left"
+              data-aos-duration="600"
+            >
               Our Company Overview
             </h1>
-            <p>
+            <p data-aos="fade-left" data-aos-duration="600">
               Leverage agile frameworks to provide a robust synopsis for
               strategy foster collaborative thinking to further the overall
               value proposition.
             </p>
           </div>
 
-          <ul className="flex w-full my-5  space-x-5">
+          <ul
+            className="flex w-full my-5  space-x-5"
+            data-aos="fade-left"
+            data-aos-duration="600"
+          >
             {tabs.map((tab, index) => (
               <li
                 key={index}
@@ -64,11 +87,19 @@ const AboutCompany = () => {
             ))}
           </ul>
 
-          <div className="  text-[16px] leading-6 font-[700]">
+          <div
+            className="  text-[16px] leading-6 font-[700]"
+            data-aos="fade-left"
+            data-aos-duration="600"
+          >
             {tabs[activeTab].content}
           </div>
 
-          <div className="bg-indigo-950 mt-10 text-white w-fit px-6 py-3">
+          <div
+            className="bg-indigo-950 mt-10 text-white w-fit px-6 py-3"
+            data-aos="fade-left"
+            data-aos-duration="600"
+          >
             <Link to="/" className="text-white  ">
               Learn More
             </Link>
