@@ -33,7 +33,7 @@ const WhatWeDo = () => {
 
   return (
     <div>
-      <section className="px-5 xl:px-40 w-full my-40 min-h-[50vh] py-20 gap-20 flex flex-col lg:flex-row  ">
+      <section className="px-5 xl:px-40 w-full my-40 min-h-[50vh] py-20 gap-20 flex flex-col lg:flex-row overflow-hidden ">
         <div
           className="flex-[30%] "
           data-aos="fade-right"

@@ -20,7 +20,7 @@ const Navbar = () => {
   };
   return (
     <div>
-      <nav className='px-5 xl:px-40 bg-[url("/Background.png")]  justify-between flex w-full items-center'>
+      <nav className='px-5 xl:px-40 bg-[url("/Background.png")]  justify-between flex w-full items-center overflow-hidden'>
         <div className="space-x-10 hidden lg:block">
           <Link
             className="size-[16px] text-[#ffffff] font-[600] leading-[21px]"
@@ -56,7 +56,7 @@ const Navbar = () => {
             <FaLinkedinIn className="text-[#ffffff]" />
           </div>
 
-          <Link to="/">
+          <Link to="/contact">
           <div className="bg-white py-4 px-4 ">
             <p className="text-sm">Request Quote</p>
           </div>
@@ -75,8 +75,8 @@ const Navbar = () => {
       {/* for smaller screens sizes */}
 
       <nav
-        className={`w-full absolute lg:hidden space-y-10 transform z-10 transition-transform duration-500 delay-150 ease-in-out  bg-[#091242] p-8  ${
-          isMenuOpen ? "-translate-y-0" : "-translate-y-[2000px]"
+        className={`w-full  absolute lg:hidden space-y-10 transform z-10 transition-transform duration-500 delay-150 ease-in-out  bg-[#091242] p-8  ${
+          isMenuOpen ? "translate-y-0" : "-translate-y-[1500px]"
         } `}
       >
         <div className="flex flex-col space-y-10">

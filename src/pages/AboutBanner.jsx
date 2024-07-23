@@ -20,7 +20,7 @@ const AboutBanner = () => {
       <Navbar />
 
       <section className="px-5 xl:px-40  grid items-center min-h-full">
-        <div className="" data-aos='fade-right' data-aos-duration='600'>
+        <div className="" data-aos='fade-up' data-aos-duration='600'>
           <p className="p-2 text-[14px] font-[400] bg-gray-100 w-fit border-l-4 border-[#FFB629]">
             About Us
           </p>

@@ -49,7 +49,7 @@ const ServiceTab = () => {
   ];
   return (
     <div>
-      <section className="px-5 xl:px-40 w-full ">
+      <section className="px-5 xl:px-40 w-full overflow-hidden ">
         <div
           className="flex flex-col justify-center items-center "
           data-aos="fade-right"

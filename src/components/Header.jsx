@@ -7,7 +7,7 @@ import { MdOutlinePhone } from "react-icons/md";
 const Header = () => {
   return (
     <div>
-      <header className="w-full px-5 xl:px-40 flex items-center bg-[#091242] py-8 justify-between ">
+      <header className="w-full px-5 xl:px-40 flex items-center bg-[#091242] py-8 justify-between overflow-hidden ">
         <div className="h-[36px]">
           <img className="h-[36px]" src="/Logo (8).png" alt="" />
         </div>

@@ -10,7 +10,7 @@ const Work = () => {
 
   return (
     <div>
-      <main className="mt-40 -mb-[100px] px-5 lg:px-40 ">
+      <main className="mt-40 -mb-[100px] px-5 lg:px-40 overflow-hidden">
         <div className="text-center">
           <p
             className="text-[35px] leading-[41px] font-[600] text-[#1C1F35] mb-10"

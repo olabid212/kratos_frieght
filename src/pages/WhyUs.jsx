@@ -10,7 +10,7 @@ const WhyUs = () => {
 
   return (
     <div>
-      <div className="px-5   xl:px-40  mb-40">
+      <div className="px-5 w-full   xl:px-40  mb-40">
         <main className='w-full -mt-[200px]  p-10 bg-white bg-[url("/Photo (1).png")]  grid grid-cols-1 justify-center items-center md:grid-cols-2 gap-20 '>
           <div className=" space-y-4 ">
             <p
@@ -69,7 +69,7 @@ const WhyUs = () => {
         </main>
 
         <div
-          className="flex justify-center mt-[50px]"
+          className="flex justify-center mt-[50px] overflow-hidden"
           data-aos="fade-up"
           data-aos-duration="600"
         >

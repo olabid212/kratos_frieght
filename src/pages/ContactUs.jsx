@@ -13,7 +13,7 @@ const ContactUs = () => {
 
   return (
     <div>
-      <main className="px-5 mb-40 py-20 xl:px-40 w-full bg-[#091242] ">
+      <main className="px-5 mb-40 py-20 xl:px-40 w-full bg-[#091242] overflow-hidden">
         <div className="flex flex-col md:flex-row gap-20">
           <div className="space-y-5 flex-[40%] ">
             <p

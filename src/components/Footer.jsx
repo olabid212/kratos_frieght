@@ -148,7 +148,7 @@ const Footer = () => {
                 />{" "}
                 <br /> <br />
                 <div className="flex items-center space-x-5">
-                <button className="bg-[#FFB629] w-fit px-6 py-3 text-[#fff] ">
+                <button className="bg-[#FFB629] w-fit px-6 py-3 ">
                   Send Now
                 </button>
                 <div className="flex space-x-3">

@@ -13,14 +13,14 @@ useEffect(() => {
 
 
   return (
-    <div className='bg-[url("/Photo.png")] bg-cover w-full'>
+    <div className='bg-[url("/Photo.png")] bg-cover w-full overflow-hidden' >
       <Navbar />
-      <main className="h-[100vh] px-5 lg:px-40 grid items-center ">
+      <main className="h-[100vh] px-5 xl:px-40 grid items-center ">
         <div className="space-y-5 sm:w-[600px] w-[300px]" data-aos='fade-right' data-aos-duration='600'>
           <p className="text-[14px] font-[400] border-l-2 ps-2 text-white border-[#FFB629]">
             Logistics & Supply Chain Solutions
           </p>
-          <h1 className="leading-[71px] text-[30px] md:text-[60px] font-[700] text-[#fff]">
+          <h1 className="leading-[61px] text-[40px] md:text-[60px] font-[700] text-[#fff]">
             Your Gateway to any Destination in the World
           </h1>
           <p className="text-[16px] leading-[24px] font-[500] text-[#fff]">
